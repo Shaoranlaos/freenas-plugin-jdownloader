@@ -1,0 +1,23 @@
+{
+        "servicerestart":"service jdownloader restart",
+      	"serviceget": "/usr/local/bin/pluginget",
+        "serviceset": "/usr/local/bin/pluginset",
+        pkgs: [
+          "shells/bash",
+          "java/openjdk8-jre"
+        ],
+        "options": {
+                "username": {
+                        "type": "string",
+                        "name": "MyJdownloader Username",
+                        "description": "Username to connect this instance to.",
+                        "requirerestart": true
+                },
+                "password": {
+                        "type": "delete",
+                        "name": "MyJdownloader Password",
+                        "description": "Password of the User."
+                }
+
+        }
+}
