@@ -6,8 +6,9 @@
 
 name=jdownloader
 rcvar=`set_rcvar`
-command="java -Djava.awt.headless=true -jar JDownloader.jar"
-start_cmd="/usr/sbin/daemon -u $pytivo_user $command"
+command="java"
+command_args=" -Djava.awt.headless=true -jar JDownloader.jar"
+start_cmd="/usr/sbin/daemon $command $command_args"
 
 cd /usr/share/local/jdownloader
 
