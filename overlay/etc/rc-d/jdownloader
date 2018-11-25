@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# REQUIRE: LOGIN FILESYSTEMS
+
+. /etc/rc.subr
+
+name=jdownloader
+rcvar=`set_rcvar`
+command="java -Djava.awt.headless=true -jar JDownloader.jar"
+start_cmd="/usr/sbin/daemon -u $pytivo_user $command"
+
+cd /usr/share/local/jdownloader
+
+load_rc_config $name
+run_rc_command "$1"
